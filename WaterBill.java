@@ -10,64 +10,57 @@ public class WaterBill {
 		PerUnitPrice domesticOneToTenkl = new PerUnitPrice();
 		domesticOneToTenkl.minimumUnits=0;
 		domesticOneToTenkl.maximumUnits=10;
-		domesticOneToTenkl.price=5;
+		domesticOneToTenkl.price=4;
 		domesticOneToTenkl.type="Domestic";
 		
-		PerUnitPrice domesticElevenToTwentyFivekl = new PerUnitPrice();
-		domesticElevenToTwentyFivekl.minimumUnits=11;
-		domesticElevenToTwentyFivekl.maximumUnits=25;
-		domesticElevenToTwentyFivekl.price=10;
-		domesticElevenToTwentyFivekl.type="Domestic";
+		PerUnitPrice domesticElevenToFifteenkl = new PerUnitPrice();
+		domesticElevenToFifteenkl.minimumUnits=11;
+		domesticElevenToFifteenkl.maximumUnits=15;
+		domesticElevenToFifteenkl.price=16;
+		domesticElevenToFifteenkl.type="Domestic";
 		
-		PerUnitPrice domesticTwentySixToFiftykl = new PerUnitPrice();
-		domesticTwentySixToFiftykl.minimumUnits=26;
-		domesticTwentySixToFiftykl.maximumUnits=50;
-		domesticTwentySixToFiftykl.price=15;
-		domesticTwentySixToFiftykl.type="Domestic";
+		PerUnitPrice domesticSixteenToTwentyFivekl = new PerUnitPrice();
+		domesticSixteenToTwentyFivekl.minimumUnits=16;
+		domesticSixteenToTwentyFivekl.maximumUnits=25;
+		domesticSixteenToTwentyFivekl.price=24;
+		domesticSixteenToTwentyFivekl.type="Domestic";
 		
-		PerUnitPrice domesticFiftyOneToHundredkl = new PerUnitPrice();
-		domesticFiftyOneToHundredkl.minimumUnits=51;
-		domesticFiftyOneToHundredkl.maximumUnits=100;
-		domesticFiftyOneToHundredkl.price=30;
-		domesticFiftyOneToHundredkl.type="Domestic";
+		PerUnitPrice domesticTwentySixToHundredkl = new PerUnitPrice();
+		domesticTwentySixToHundredkl.minimumUnits=26;
+		domesticTwentySixToHundredkl.maximumUnits=100;
+		domesticTwentySixToHundredkl.price=40;
+		domesticTwentySixToHundredkl.type="Domestic";
 		
 		
 		PerUnitPrice commercialOneToTenkl = new PerUnitPrice();
 		commercialOneToTenkl.minimumUnits=0;
 		commercialOneToTenkl.maximumUnits=10;
-		commercialOneToTenkl.price=15;
+		commercialOneToTenkl.price=8;
 		commercialOneToTenkl.type="Commercial";
 		
-		PerUnitPrice commercialElevenToTwentyFivekl = new PerUnitPrice();
-		commercialElevenToTwentyFivekl.minimumUnits=11;
-		commercialElevenToTwentyFivekl.maximumUnits=25;
-		commercialElevenToTwentyFivekl.price=30;
-		commercialElevenToTwentyFivekl.type="Commercial";
+		PerUnitPrice commercialElevenToFifteenkl = new PerUnitPrice();
+		commercialElevenToFifteenkl.minimumUnits=11;
+		commercialElevenToFifteenkl.maximumUnits=15;
+		commercialElevenToFifteenkl.price=25;
+		commercialElevenToFifteenkl.type="Commercial";
 		
-		PerUnitPrice commercialTwentySixToFiftykl = new PerUnitPrice();
-		commercialTwentySixToFiftykl.minimumUnits=26;
-		commercialTwentySixToFiftykl.maximumUnits=50;
-		commercialTwentySixToFiftykl.price=45;
-		commercialTwentySixToFiftykl.type="Commercial";
-		
-		PerUnitPrice commercialFiftyOneToHundredKl = new PerUnitPrice();
-		commercialFiftyOneToHundredKl.minimumUnits=51;
-		commercialFiftyOneToHundredKl.maximumUnits=100;
-		commercialFiftyOneToHundredKl.price=90;
-		commercialFiftyOneToHundredKl.type="Commercial";
+		PerUnitPrice commercialSixteenToHundredKl = new PerUnitPrice();
+		commercialSixteenToHundredKl.minimumUnits=16;
+		commercialSixteenToHundredKl.maximumUnits=100;
+		commercialSixteenToHundredKl.price=40;
+		commercialSixteenToHundredKl.type="Commercial";
 		
 		list.add(domesticOneToTenkl);
-		list.add(domesticElevenToTwentyFivekl);
-		list.add(domesticTwentySixToFiftykl);
-		list.add(domesticFiftyOneToHundredkl);
+		list.add(domesticElevenToFifteenkl);
+		list.add(domesticSixteenToTwentyFivekl);
+		list.add(domesticTwentySixToHundredkl);
 		list.add(commercialOneToTenkl);
-		list.add(commercialElevenToTwentyFivekl);
-		list.add(commercialTwentySixToFiftykl);
-		list.add(commercialFiftyOneToHundredKl);
+		list.add(commercialElevenToFifteenkl);
+		list.add(commercialSixteenToHundredKl);
 	}
 	public static int getPerUnitPrice(String type, int units)
 	{
-		if(units < 0 || units > 100 ) {
+		if(units <= 0 || units > 101 ) {
 			throw new IllegalArgumentException("Invalid Unit");
 		}
 		
@@ -83,3 +76,4 @@ public class WaterBill {
 		
 	}
 }
+
